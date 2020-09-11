@@ -1,55 +1,53 @@
 import java.util.Scanner;
 
 public class Bob {
-
     public static void main(String[] args) {
-        // Bob answers 'Sure.' if you ask him a question. (the input ends with a question mark)
-        // He answers 'Whoa, chill out!' if you yell at him. (the input ends with an exclamation mark)
-        // He says 'Fine. Be that way!' if you address him without actually saying anything. (empty input)
-        // He answers 'Whatever.' to anything else.
 
-        MethodsLec thisMethod = new MethodsLec();
-        thisMethod.sayHi("Casey");
-
-        // double number = Math.pow(4,3);
-        // Math mathTool = new Math();
-        // MethodsLec.sayHi("casey");
+        String sure = "Sure";
+        String chillOut = "Whoa, chill out!";
+        String fine = "Fine. Be that way!";
+        String whatever = "Whatever...";
+        String bye = "Bye!";
 
         Scanner sc = new Scanner(System.in);
-        boolean again = true; // should we continue or not?
+        System.out.println("This is Bob:  0_0\n" +
+                "              -|-\n" +
+                "              / \\\n" +
+                "Talk to Bob:");
+        System.out.println("(...If you'd ever like to end your talk with Bob type: 'bye')");
+        String userInput;
+
         do {
-            System.out.print("Type @ Bob: ");
-            String userInput = sc.nextLine(); // either a string, or empty string
-
-            if( userInput.isEmpty() ) {
-                System.out.println("Fine, be that way.");
+            userInput = sc.nextLine();
+            if (userInput.endsWith("?")) {
+                System.out.print(sure);
+                System.out.print("  ^_^\n" +
+                        "      -|-\n" +
+                        "      / \\\n");
+            } else if (userInput.endsWith("!")) {
+                System.out.print(chillOut);
+                System.out.print("  0_0\n" +
+                        "                  ~|~\n" +
+                        "                  / \\\n");
+            } else if (userInput.equals("")) {
+                System.out.print(fine);
+                System.out.print("  0_o\n" +
+                        "                    <|>\n" +
+                        "                    / \\\n");
+            }else if(userInput.equals("bye")){
+                System.out.print(bye);
+                System.out.print(" 0_0\n" +
+                        "     <|-'\n" +
+                        "     / \\\n");
             } else {
-                char lastChar = userInput.charAt(userInput.length()-1); // last character
-                switch(lastChar) {
-                    case '?':
-                        System.out.println("Sure");
-                        break;
-                    case '!':
-                        System.out.println("Whoa, chill out!");
-                        break;
-                    default:
-                        System.out.println("Whatever");
-                        break;
-                }
-
-                // ask the user if they would like to continue
-                System.out.print("DM Bob again? [y/N]: ");
-                String response = sc.nextLine();
-                if(!response.trim().equalsIgnoreCase("y")) {
-                    again = false;
-                }
+                System.out.print(whatever);
+                System.out.print("  -_-\n" +
+                        "              <|>\n" +
+                        "              / \\\n");
             }
+        } while(!userInput.equals("bye"));
 
-        } while(again);
 
-        // user has clicked something other than y/Y, so exit with a message
-        System.out.println("kthxbai");
 
     }
-
 }

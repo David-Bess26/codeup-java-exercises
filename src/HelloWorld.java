@@ -1,49 +1,65 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class HelloWorld {
     public static void main(String[] args) {
-       int myFavoriteNumber = 17;
-       System.out.println(myFavoriteNumber);
+        System.out.println("Hello, World");
 
-       String myString = "I was hungry from my lecture, so I ordered Tiff's Treats for me and my fiance.";
-//       myString = 'g';
-//       myString = 3.14159;
-       System.out.println(myString);
+        int myFavoriteNumber = 2;
+        System.out.println(myFavoriteNumber);
 
-       float myNumber = (float) 3.14;
-       System.out.println(myNumber);
+        String myString = "I drink and I know things";
+        System.out.println(myString);
 
-        int x = 5;
-        System.out.println(x++);
-        System.out.println(x);
+//        char wrong = myString;
+//        myString = 3.14159;
+        long myNumber;
+//        System.out.println(myNumber);
 
-        int y = 5;
-        System.out.println(++y);
-        System.out.println(y);
+//        myNumber = 3.14;
+        myNumber = 123L;
+        System.out.println(myNumber);
 
-//        String class = "Hyperion";
+        float newNumber = myNumber;
+        System.out.println(newNumber);
+
+//        int x = 5;
+//        System.out.println(x++);
+//        System.out.println(x);
+
+//        int x = 5;
+//        System.out.println(++x);
+//        System.out.println(x);
+
+//        int class = 123;
 
 //        String theNumberThree = "three";
 //        Object o = theNumberThree;
 //        int three = (int) o;
+//        System.out.println(three);
 
-        int k = 4;
-        k += 5;
-        System.out.println(k);
+//        int three = (int) "three";
+//        System.out.println(three);
 
-        x = 3;
-        y = 4;
-        y *= x;
-        System.out.println(y);
 
-        x = 10;
-        y = 2;
-        x /= y;
-        y -= x;
+        int x = 4;
+        x += 5;
 
-        System.out.println(x);
-        System.out.println(y);
+        int a = 3;
+        int b = 4;
+        b *= a;
 
-        int coolExample = Integer.MAX_VALUE + 1;
-        System.out.println(coolExample);
+        int q = 10;
+        int r = 2;
+        q /= r;
+
+        short bigger = -130;
+        byte tooBig = (byte) bigger;
+        System.out.println(tooBig);
+
 
     }
 }
+//shortcuts
+//psvm then tab == public static void
+//sout control j == printing out line
+//command r will run the program
