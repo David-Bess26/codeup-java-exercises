@@ -1,39 +1,33 @@
+import java.lang.reflect.Array;
+
 public class Person {
+
     private String name;
-
-    public String getName() {
+    public String getName(){
         return name;
+    };
+    public void setName(String name){
+        this.name = name;
+    };
+    public void sayHello(){
+        System.out.println("Hello from " + this.name);
+    };
+    //constructors
+    Person(String nameExt){
+        this.name = nameExt;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public Person(String name) {
-        this.name = name;
-    }
 
     public static void main(String[] args) {
-        Person person1 = new Person("John");
-        Person person2 = new Person("John");
-        System.out.println(person1.getName().equals(person2.getName()));
-        System.out.println(person1 == person2);
-        //
-        Person person3 = new Person("John");
-        Person person4 = person3;
-        System.out.println(person3 == person4);
-        //
-        Person person5 = new Person("John");
-        Person person6 = person5;
-        System.out.println(person5.getName());
-        System.out.println(person6.getName());
-        person2.setName("Jane");
-        System.out.println(person5.getName());
-        System.out.println(person6.getName());
-
-    }
-
-    public void sayHello() {
-        System.out.println("Hello, my name is " + this.getName());
+        Person per = new Person("Jacob");
+        per.sayHello();
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1.getName());
+//        System.out.println(person2.getName());
+//        person2.setName("Jane");
+//        System.out.println(person1.getName());
+//        System.out.println(person2.getName());
     }
 }
