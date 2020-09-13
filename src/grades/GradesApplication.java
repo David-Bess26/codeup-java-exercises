@@ -30,10 +30,10 @@ public class GradesApplication {
 
 
         HashMap<String, Student> usernames = new HashMap<>();
-        usernames.put("123", john);
-        usernames.put("223", jahn);
-        usernames.put("323", jehn);
-        usernames.put("423", jihn);
+        usernames.put("1", john);
+        usernames.put("2", jahn);
+        usernames.put("3", jehn);
+        usernames.put("4", jihn);
 
         while (true) {
             System.out.println("Which student would you like to see more info about: " + usernames.keySet());
